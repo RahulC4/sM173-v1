@@ -1,0 +1,13 @@
+az container create \
+  --resource-group 2238880_rg \
+  --name qdrant-facets-user-mapping \
+  --image qdrant/qdrant:latest \
+  --cpu 1 \
+  --memory 2 \
+  --ports 6333 \
+  --dns-name-label qdrant-user-mapping \
+  --azure-file-volume-account-name YOUR_STORAGE_ACCOUNT_NAME \
+  --azure-file-volume-account-key YOUR_STORAGE_ACCOUNT_KEY \
+  --azure-file-volume-share-name qdrant-share \
+  --azure-file-volume-mount-path /qdrant/storage \
+  --ip-address Public
