@@ -11,3 +11,11 @@ az container create \
   --azure-file-volume-share-name qdrant-share \
   --azure-file-volume-mount-path /qdrant/storage \
   --ip-address Public
+
+
+
+
+az acr import \
+  --name qdrantacr2238880 \
+  --source mcr.microsoft.com/qdrant/qdrant:latest \
+  --image qdrant/qdrant:latest
