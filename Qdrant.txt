@@ -19,3 +19,15 @@ az acr import \
   --name qdrantacr2238880 \
   --source mcr.microsoft.com/qdrant/qdrant:latest \
   --image qdrant/qdrant:latest
+
+
+az acr import \
+  --name qdrantacr2238880 \
+  --source docker.io/library/qdrant:latest \
+  --image qdrant/qdrant:latest
+
+
+az acr import \
+  --name qdrantacr2238880 \
+  --source docker.io/qdrant/qdrant:v1.7.4 \
+  --image qdrant/qdrant:v1.7.4
