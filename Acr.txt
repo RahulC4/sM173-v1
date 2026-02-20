@@ -1,0 +1,17 @@
+az container create \
+  --resource-group 2238880_rg \
+  --name qdrant-facets-user-mapping \
+  --image qdrantacr2238880.azurecr.io/qdrant/qdrant:latest \
+  --registry-login-server qdrantacr2238880.azurecr.io \
+  --registry-username qdrantacr2238880 \
+  --registry-password YOUR_ACR_PASSWORD \
+  --os-type Linux \
+  --cpu 1 \
+  --memory 2 \
+  --ports 6333 \
+  --dns-name-label qdrant-user-mapping \
+  --azure-file-volume-account-name YOUR_STORAGE_ACCOUNT_NAME \
+  --azure-file-volume-account-key YOUR_STORAGE_ACCOUNT_KEY \
+  --azure-file-volume-share-name qdrant-share \
+  --azure-file-volume-mount-path /qdrant/storage \
+  --ip-address Public
